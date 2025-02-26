@@ -6,10 +6,34 @@ public class Paciente {
 
    public String nome;
    public LocalDate dataNascimento;
-   public double peso;
-   public double altura;
+   private double peso;
+   private double altura;
    public String telefone;
    public boolean estaInternado;
+   
+   public void setPeso(double peso) {
+	   
+	   if(peso >= 40) {
+		   //true
+		   this.peso = peso;
+	   } else {
+		  //false
+		  System.out.println("O peso do(a) paciente " + nome + " deve ser maior ou igual a 40!");
+	   }
+	   
+   }
+   
+   public void setAltura(double altura) {
+	   
+	   if(altura > 0) {
+		   //true
+		   this.altura = altura;
+	   } else {
+		   //false
+		   System.out.println("A altura do(a) paciente " + nome + " está incorreto!");
+	   }
+	      	  
+   }
    
    public void calcularIdade() {
 	   
